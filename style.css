@@ -2011,3 +2011,29 @@ button,
   top: 47%;
   left: 49%;
 }
+/* ===== HOTSPOT POSITION FINAL FIX ===== */
+
+.hotspot-solar {
+  top: 7%;
+  left: 38%;
+}
+
+.hotspot-heatpump {
+  top: 78%;
+  left: 31.5%;
+}
+
+.hotspot-battery {
+  top: 76%;
+  left: 49.5%;
+}
+
+.hotspot-ev {
+  top: 66%;
+  left: 82%;
+}
+
+.hotspot-control {
+  top: 46%;
+  left: 49.5%;
+}
