@@ -2037,3 +2037,24 @@ button,
   top: 46%;
   left: 49.5%;
 }
+/* ===== HOTSPOT POSITION CLEAN FIX ===== */
+
+.hotspot-solar {
+  top: 8%;
+  left: 39%;
+}
+
+.hotspot-heatpump {
+  top: 82%;
+  left: 27%;
+}
+
+.hotspot-battery {
+  top: 76%;
+  left: 51%;
+}
+
+.hotspot-ev {
+  top: 65%;
+  left: 82%;
+}
