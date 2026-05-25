@@ -2096,3 +2096,22 @@ body > .hotspot,
 .section > .hotspot {
   display: none !important;
 }
+.home-map .hotspot-solar {
+  top: 9%;
+  left: 38%;
+}
+
+.home-map .hotspot-heatpump {
+  top: 80%;
+  left: 31%;
+}
+
+.home-map .hotspot-battery {
+  top: 74%;
+  left: 50%;
+}
+
+.home-map .hotspot-ev {
+  top: 63%;
+  left: 82%;
+}
