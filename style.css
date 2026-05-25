@@ -2058,3 +2058,41 @@ button,
   top: 65%;
   left: 82%;
 }
+/* ===== HOTSPOT CLEAN FINAL ===== */
+
+.home-map {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-map .hotspot {
+  position: absolute;
+  z-index: 20;
+}
+
+.home-map .hotspot-solar {
+  top: 9%;
+  left: 38%;
+}
+
+.home-map .hotspot-heatpump {
+  top: 78%;
+  left: 27%;
+}
+
+.home-map .hotspot-battery {
+  top: 74%;
+  left: 50%;
+}
+
+.home-map .hotspot-ev {
+  top: 63%;
+  left: 82%;
+}
+
+/* ukrywa każdą przypadkową kropkę, jeśli nie jest w home-map */
+body > .hotspot,
+.cta > .hotspot,
+.section > .hotspot {
+  display: none !important;
+}
