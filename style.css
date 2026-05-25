@@ -1726,3 +1726,36 @@ button,
     #0b110d;
 }
 
+/* ===== FINAL FIX - OFERTA IMAGE FULL HEIGHT ===== */
+
+.offer-page-card {
+  align-items: stretch;
+}
+
+.offer-page-image {
+  height: 100%;
+  overflow: hidden;
+}
+
+.offer-page-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.offer-page-card:hover .offer-page-image img {
+  transform: scale(1.035);
+}
+
+@media (max-width: 950px) {
+  .offer-page-image,
+  .offer-page-image img {
+    height: auto;
+  }
+
+  .offer-page-image img {
+    min-height: 380px;
+  }
+}
