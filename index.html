@@ -12,7 +12,31 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.querySelector(".hero-video");
 
+    if (!video) return;
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.setAttribute("muted", "");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
+
+    function tryPlay() {
+      video.play().catch(() => {});
+    }
+
+    tryPlay();
+
+    window.addEventListener("load", tryPlay);
+    window.addEventListener("scroll", tryPlay, { once: true });
+    window.addEventListener("touchstart", tryPlay, { once: true });
+    window.addEventListener("click", tryPlay, { once: true });
+  });
+</script>
 <body>
 
 <header class="header">
