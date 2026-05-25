@@ -2115,3 +2115,19 @@ body > .hotspot,
   top: 63%;
   left: 82%;
 }
+/* ===== HOTSPOT TOOLTIP FIX ===== */
+
+.home-map .hotspot-info {
+  bottom: auto;
+  top: 36px;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+.home-map .hotspot:hover .hotspot-info {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* tooltip dla paneli — lekko w prawo, żeby nie przykrywał tekstu nad obrazem */
+.home-map .hotspot-solar .hotspot-info {
+  left: 80px;
+}
