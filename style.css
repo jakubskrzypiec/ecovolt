@@ -1759,3 +1759,144 @@ button,
     min-height: 380px;
   }
 }
+/* ===== INTERACTIVE HOME SYSTEM ===== */
+
+.home-system {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 90px 28px;
+}
+
+.home-map {
+  position: relative;
+  border-radius: 34px;
+  overflow: hidden;
+  box-shadow: 0 24px 75px rgba(0,0,0,0.12);
+  background: #fff;
+}
+
+.home-map img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* punkty */
+.hotspot {
+  position: absolute;
+  z-index: 5;
+}
+
+.hotspot > span {
+  width: 22px;
+  height: 22px;
+  background: #8ee000;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  display: block;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(142, 224, 0, 0.7);
+  animation: hotspotPulse 2s infinite;
+}
+
+@keyframes hotspotPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(142, 224, 0, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 18px rgba(142, 224, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(142, 224, 0, 0);
+  }
+}
+
+.hotspot-info {
+  position: absolute;
+  left: 50%;
+  bottom: 34px;
+  transform: translateX(-50%) translateY(10px);
+  width: 240px;
+  background: rgba(17, 28, 22, 0.96);
+  color: #fff;
+  padding: 18px;
+  border-radius: 18px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  pointer-events: none;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+}
+
+.hotspot-info h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #8ee000;
+}
+
+.hotspot-info p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.82);
+}
+
+.hotspot:hover .hotspot-info {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* pozycje kropek na grafice */
+.hotspot-solar {
+  top: 18%;
+  left: 36%;
+}
+
+.hotspot-heatpump {
+  top: 72%;
+  left: 30%;
+}
+
+.hotspot-battery {
+  top: 71%;
+  left: 50%;
+}
+
+.hotspot-ev {
+  top: 61%;
+  left: 78%;
+}
+
+.hotspot-control {
+  top: 49%;
+  left: 58%;
+}
+
+/* mobile */
+@media (max-width: 760px) {
+  .home-system {
+    padding: 70px 22px;
+  }
+
+  .hotspot > span {
+    width: 18px;
+    height: 18px;
+    border-width: 3px;
+  }
+
+  .hotspot-info {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .hotspot-info h3 {
+    font-size: 17px;
+  }
+
+  .hotspot-info p {
+    font-size: 12px;
+  }
+}
