@@ -1985,3 +1985,29 @@ button,
     border-width: 3px;
   }
 }
+/* ===== HOTSPOT POSITION FIX ===== */
+
+.hotspot-solar {
+  top: 7%;
+  left: 11%;
+}
+
+.hotspot-heatpump {
+  top: 80%;
+  left: 3%;
+}
+
+.hotspot-battery {
+  top: 79%;
+  left: 26%;
+}
+
+.hotspot-ev {
+  top: 65%;
+  left: 82%;
+}
+
+.hotspot-control {
+  top: 47%;
+  left: 49%;
+}
