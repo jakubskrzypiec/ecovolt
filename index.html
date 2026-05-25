@@ -12,31 +12,7 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const video = document.querySelector(".hero-video");
 
-    if (!video) return;
-
-    video.muted = true;
-    video.defaultMuted = true;
-    video.playsInline = true;
-    video.setAttribute("muted", "");
-    video.setAttribute("playsinline", "");
-    video.setAttribute("webkit-playsinline", "");
-
-    function tryPlay() {
-      video.play().catch(() => {});
-    }
-
-    tryPlay();
-
-    window.addEventListener("load", tryPlay);
-    window.addEventListener("scroll", tryPlay, { once: true });
-    window.addEventListener("touchstart", tryPlay, { once: true });
-    window.addEventListener("click", tryPlay, { once: true });
-  });
-</script>
 <body>
 
 <header class="header">
@@ -58,8 +34,8 @@
 
 <section class="hero">
   <video autoplay muted loop playsinline webkit-playsinline preload="auto" class="hero-video" poster="home.png">
-  <source src="film.mp4" type="video/mp4">
-</video>
+    <source src="film.mp4" type="video/mp4">
+  </video>
 
   <div class="hero-overlay"></div>
 
@@ -294,6 +270,33 @@
     © 2026 EcoVolt Solutions – Wszystkie prawa zastrzeżone
   </div>
 </footer>
+
+<script>
+  const heroVideo = document.querySelector(".hero-video");
+
+  function startHeroVideo() {
+    if (!heroVideo) return;
+
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    heroVideo.playsInline = true;
+
+    heroVideo.setAttribute("muted", "");
+    heroVideo.setAttribute("playsinline", "");
+    heroVideo.setAttribute("webkit-playsinline", "");
+
+    heroVideo.play().catch(() => {});
+  }
+
+  document.addEventListener("DOMContentLoaded", startHeroVideo);
+  window.addEventListener("load", startHeroVideo);
+
+  document.addEventListener("click", startHeroVideo, { once: true });
+  document.addEventListener("touchstart", startHeroVideo, { once: true });
+  document.addEventListener("keydown", startHeroVideo, { once: true });
+  document.addEventListener("mousemove", startHeroVideo, { once: true });
+  document.addEventListener("scroll", startHeroVideo, { once: true });
+</script>
 
 </body>
 </html>
